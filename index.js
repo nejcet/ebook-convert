@@ -27,6 +27,7 @@ module.exports = function ebookConvert (args, options, callback) {
     }
     args = toFlags(args).join(' ')
     var cmd = 'QTWEBENGINE_CHROMIUM_FLAGS="--no-sandbox" ebook-convert ' + input + ' ' + output + ' ' + args
+    console.log('cmd: ', cmd)
     exec(cmd, options, callback)
   })
 }
